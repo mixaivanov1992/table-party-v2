@@ -1,0 +1,45 @@
+.home{
+    margin: 1em 2em;
+    div{
+        text-align: center;
+        font-size: 2em;
+        position: relative;
+        &::after{
+            content: attr(data-hello);
+            background: #f9f9f9;
+            position: relative;
+            padding: 0 1.2em;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 45%;
+            left: 0;
+            height: 0.4em;
+            background: #38ae90;
+            width: 98%;
+        }
+    }
+    p{
+        text-indent: 1em;
+        margin-top: 0;
+        font-size: 1.3em;
+        &:last-child {
+            text-align: right;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        div{
+            font-size: 1.3em;
+        }
+        p{
+            text-indent: 1em;
+            margin-top: 0;
+            font-size: 1em;
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}
+
